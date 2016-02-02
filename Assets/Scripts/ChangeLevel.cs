@@ -8,7 +8,7 @@ class ChangeLevel : MonoBehaviour
     {
         yield return new WaitForSeconds(fadeTime);
         
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(GameMain.LEVEL_1);
     }
 
     void OnCollisionEnter2D(Collision2D col)

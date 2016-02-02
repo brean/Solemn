@@ -52,8 +52,11 @@ public class Ground
 
 public class GameMain : MonoBehaviour {
     // names for Scenes (makes it easier)
+    public static int START_MENU = 0;
     public static int LEVEL_1 = 1;
+    public static int MENU_MINI_GAME1 = 2;
     public static int MINI_GAME1 = 3;
+    public static int DEATH_SCREEN = 4;
 
     public static int currentLevel = 0;
 
@@ -169,7 +172,7 @@ public class GameMain : MonoBehaviour {
     public static void OnPlayerDied()
     {
         // this will reset to the first level
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(GameMain.DEATH_SCREEN);
         //SceneManager.LoadScene(currentLevel, LoadSceneMode.Single);
         // TODO: show Main UI Screen
     }
